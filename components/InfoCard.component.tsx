@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import { Card, Text, Row, Col, Button } from "@nextui-org/react";
-import { title } from "process";
 
 interface Props {
   title: string;
@@ -16,11 +15,47 @@ const InfoCard: NextPage<Props> = (props) => {
     <Card>
       <Card.Header css={{ position: "absolute", top: "5" }}>
         <Col>
-                  <Text size={12} weight="bold" css={{ transform: "uppercase", color: "ffffffAA" }}>{label}</Text>
-                  <Text h4 color="white">{ title}</Text>
+          <Text
+            size={12}
+            weight="bold"
+            css={{ transform: "uppercase", color: "ffffffAA" }}
+          >
+            {label}
+          </Text>
+          <Text h4 color="white">
+            {title}
+          </Text>
         </Col>
-          </Card.Header>
-          <Card.Image src={imageUrl}></Card.Image>
+      </Card.Header>
+      <Card.Image src={imageUrl}></Card.Image>
+      <Card.Footer
+        isBlurred
+        css={{ position: "absolute", bgBlur: "#0f11466", bottom: 0 }}
+      >
+        <Row>
+          <Col>
+            <Text color="#d1d1d1" size={18}>
+              {studentCount} students
+            </Text>
+          </Col>
+          <Col>
+            <Row justify="flex-end">
+              <Button flat color="primary" auto rounded>
+                <Text
+                  css={{
+                    color: "inherit",
+                  }}
+                  transform="uppercase"
+                  size={12}
+                  weight="bold"
+                >
+                  Enrol
+                </Text>
+              </Button>
+            </Row>
+          </Col>
+        </Row>
+      </Card.Footer>
     </Card>
   );
 };

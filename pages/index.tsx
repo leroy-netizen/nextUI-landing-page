@@ -1,8 +1,4 @@
-import Head from "next/head";
-import Image from "next/image";
-import type { NextPage } from "next";
 import { Inter } from "@next/font/google";
-import styles from "../styles/Home.module.css";
 import { Container, Navbar, Text, Button, Grid, Col } from "@nextui-org/react";
 import InfoCard from "../components/InfoCard.component";
 
@@ -67,10 +63,26 @@ export default function Home() {
       <Grid.Container gap={2}>
         <Grid xs={12} sm={4}>
           <InfoCard
-            label="Test learn"
-            title="learning Next Js and Next Ui"
+            label="Masterclass"
+            title="learn Next Js and Next U from scratch to pro level"
             imageUrl="https://littlevisuals.co/images/vik.jpg"
-            studentCount="two"
+            studentCount="200"
+          />
+        </Grid>
+        <Grid xs={12} sm={4}>
+          <InfoCard
+            label="Components"
+            title="learn Next Ui built in components"
+            imageUrl="https://littlevisuals.co/images/red_dawn.jpg"
+            studentCount="200"
+          />
+        </Grid>
+        <Grid xs={12} sm={4}>
+          <InfoCard
+            label="Routing"
+            title="learn Next Js Routing"
+            imageUrl="https://littlevisuals.co/images/sunset.jpg"
+            studentCount="200"
           />
         </Grid>
       </Grid.Container>
