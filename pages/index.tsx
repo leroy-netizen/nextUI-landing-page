@@ -4,6 +4,7 @@ import type { NextPage } from "next";
 import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
 import { Container, Navbar, Text, Button, Grid, Col } from "@nextui-org/react";
+import InfoCard from "../components/InfoCard.component";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -38,7 +39,7 @@ export default function Home() {
       <Grid.Container
         justify="center"
         css={{
-          height: "30rem",
+          height: "500px",
           backgroundImage:
             "url(https://littlevisuals.co/images/headlights.jpg)",
         }}
@@ -62,6 +63,17 @@ export default function Home() {
         </Grid>
       </Grid.Container>
       {/* product cards */}
+
+      <Grid.Container gap={2}>
+        <Grid xs={12} sm={4}>
+          <InfoCard
+            label="Test learn"
+            title="learning Next Js and Next Ui"
+            imageUrl="https://littlevisuals.co/images/vik.jpg"
+            studentCount="two"
+          />
+        </Grid>
+      </Grid.Container>
     </Container>
   );
 }
