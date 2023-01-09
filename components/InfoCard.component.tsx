@@ -5,12 +5,13 @@ import { title } from "process";
 interface Props{
     title: string,
     label: string,
-    imageUrl: string
+    imageUrl: string,
+    studentCount: string
 }
 
 const InfoCard: NextPage<Props> = (props) => {
     // destructuring elements from the props object we are passing down
-    comst {title, label, imageUrl, studentCount }
+    const {title, label, imageUrl, studentCount } = props
     return (
         
     );
